@@ -1,4 +1,4 @@
-# <name>node-echo-server</end>
+# <name>echo-server2</end>
 
 ## Summary
 
@@ -7,16 +7,8 @@
 ## Private Usage
 
 ```
-npm install -g echo-server
+npm install -g echo-server2
 ```
-
-## Public Usage
-
-* Git clone
-* Add heroku remote
-* Push
-
-Currently running at http://echo.jpillora.com
 
 ## Example
 
@@ -67,7 +59,7 @@ Just set your `MONGOLAB_URI` env var and it will start storing `echo` documents
 <license()>
 #### MIT License
 
-Copyright &copy; 2013 Jaime Pillora &lt;dev@jpillora.com&gt;
+Copyright &copy; 2013 Archie Lee &lt;achi@987.tw&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -4,6 +4,7 @@ var http = require("http");
 var dns = require("dns");
 var port = process.env.PORT || parseInt(process.argv[2], 10) || 4000;
 var host = process.env.HOST || "0.0.0.0";
+var verbose = !!~process.argv.indexOf('--verbose') || !!~process.argv.indexOf('-v');
 var echoes = [];
 var total = 0;
 var live = 0;
@@ -127,6 +128,7 @@ http.createServer(function(req, res) {
 	if (echoes.length >= 100) echoes.unshift();
 	//push onto the back
 	echoes.push(data);
+	if (verbose) console.log(data);
 	req.on('data', function(buffer) {
 		data.body += buffer.toString();
 	});

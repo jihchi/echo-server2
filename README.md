@@ -61,6 +61,14 @@ Include `/status/<status code>` in the url
 
 Just set your `MONGOLAB_URI` env var and it will start storing `echo` documents
 
+# Docker
+
+[echo-server2](https://hub.docker.com/r/jihchi/echo-server2/)
+
+```
+$ docker run -p 4000:4000 echo-server2
+```
+
 <license()>
 #### MIT License
 

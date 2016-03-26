@@ -14,7 +14,7 @@ npm install -g echo-server2
 
 Start server
 ```
-$ echo-server 5000
+$ echo-server2 5000
 listening on 5000...
 ```
 
@@ -36,6 +36,11 @@ $ curl http://localhost:5000/foo/bar
     "live": 1
   }
 }
+```
+## Command line arguments
+
+```
+  --verbose, -v log request data to the console
 ```
 
 ## Simulate delays

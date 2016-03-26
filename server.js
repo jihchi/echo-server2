@@ -3,6 +3,7 @@ var metrics = require("./metrics");
 var http = require("http");
 var dns = require("dns");
 var port = process.env.PORT || parseInt(process.argv[2], 10) || 4000;
+var host = process.env.HOST || "0.0.0.0";
 var echoes = [];
 var total = 0;
 var live = 0;
@@ -90,7 +91,7 @@ http.createServer(function(req, res) {
 	var referer = /^(https?:\/\/[^\/]+)/.test(req.headers['referer']) ? RegExp.$1 : '*';
 	var headers = {
 		'content-type': 'application/json',
-		'echo-server-version': pkg.version,
+		'echo-server2-version': pkg.version,
 		'cache-control': 'no-cache'
 	};
 	//apply cors when needed
@@ -173,6 +174,6 @@ http.createServer(function(req, res) {
 		req.ended = true;
 		send();
 	});
-}).listen(port, "0.0.0.0", function() {
-	console.log("listening on " + port + "...");
+}).listen(port, host, function() {
+	console.log("listening on "+ host +":" + port + "...");
 });

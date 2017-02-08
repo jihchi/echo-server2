@@ -1,5 +1,7 @@
 # echo-server2
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jihchi/echo-server2.svg)](https://greenkeeper.io/)
+
 ![screenshot](screenshot.jpg)
 
 ## Summary
